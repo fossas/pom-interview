@@ -1,0 +1,257 @@
+[
+    {
+        "id": 295040,
+        "createdAt": "2020-02-06T19:35:57.445Z",
+        "updatedAt": "2020-02-06T19:35:57.445Z",
+        "type": "vulnerability",
+        "ruleId": null,
+        "revisionId": "npm+lodash.template$4.4.0",
+        "organizationId": 13453,
+        "resolved": false,
+        "resolvedAt": null,
+        "issue_tracker_id": null,
+        "notes": null,
+        "projectId": null,
+        "issue_tracker_type": "jira",
+        "vulnId": "CVE-2019-10744_npm+lodash.template",
+        "qualityRuleId": null,
+        "jira_id": null,
+        "scan_type": "top_level_revision",
+        "licenseForDefaultRule": null,
+        "resolutionReasonId": null,
+        "vendoredPackageId": null,
+        "revision": {
+            "locator": "npm+lodash.template$4.4.0",
+            "projectId": "npm+lodash.template",
+            "resolved": true,
+            "url": null,
+            "project": {
+                "title": "lodash.template",
+                "locator": "npm+lodash.template",
+                "description": "The Lodash method `_.template` exported as a module.",
+                "url": "https://www.npmjs.com/package/lodash.template",
+                "default_branch": "master",
+                "references": [
+                    {
+                        "id": 2151,
+                        "type": "branch",
+                        "name": "master",
+                        "revision_id": "npm+lodash.template$4.5.0",
+                        "project_id": "npm+lodash.template"
+                    }
+                ]
+            },
+            "projectCorrection": null,
+            "loc": {
+                "fetcher": "npm",
+                "package": "lodash.template",
+                "revision": "4.4.0"
+            }
+        },
+        "parents": [
+            {
+                "title": "very-vulnerable",
+                "locator": "git+github.com/Serubin/very-vulnerable",
+                "description": "A Very vulnerable project",
+                "url": "https://github.com/Serubin/very-vulnerable",
+                "public": true,
+                "last_analyzed_revision": "git+github.com/Serubin/very-vulnerable$6451812dc6f2149e3865af8f4f684ba88d390a3a",
+                "IssueProject": {
+                    "issueId": 295040,
+                    "projectId": "git+github.com/Serubin/very-vulnerable",
+                    "createdAt": "2020-05-18T17:11:44.818+00:00",
+                    "updatedAt": "2020-05-18T17:11:44.818+00:00",
+                    "resolved": false,
+                    "resolvedAt": null,
+                    "issue_tracker_id": null,
+                    "notes": null,
+                    "resolutionReasonId": null
+                },
+                "dependencyRefs": [
+                    {
+                        "root": "git+github.com/Serubin/very-vulnerable$6451812dc6f2149e3865af8f4f684ba88d390a3a",
+                        "locator": "npm+lodash.template$4.4.0",
+                        "type": "DETERMINED",
+                        "depth": 4
+                    }
+                ]
+            }
+        ],
+        "vulnerability": {
+            "weaknesses": [
+                {
+                    "id": 20,
+                    "title": "Improper Input Validation",
+                    "status": "Stable",
+                    "description": "The product receives input or data, but it does\n        not validate or incorrectly validates that the input has the\n        properties that are required to process the data safely and\n        correctly.",
+                    "extended_description": {
+                        "xhtml:p": [
+                            "Input validation is a frequently-used technique\n\t   for checking potentially dangerous inputs in order to\n\t   ensure that the inputs are safe processing within the\n\t   code, or when communicating with other components.  When\n\t   software does not validate input properly, an attacker is\n\t   able to craft the input in a form that is not expected by\n\t   the rest of the application. This will lead to parts of the\n\t   system receiving unintended input, which may result in\n\t   altered control flow, arbitrary control of a resource, or\n\t   arbitrary code execution.",
+                            "Input validation is not the only technique for\n\t   processing input, however.  Other techniques attempt to\n\t   transform potentially-dangerous input into something safe, such\n\t   as filtering (CWE-790) - which attempts to remove dangerous\n\t   inputs - or encoding/escaping (CWE-116), which attempts to\n\t   ensure that the input is not misinterpreted when it is included\n\t   in output to another component. Other techniques exist as well\n\t   (see CWE-138 for more examples.)",
+                            "Input validation can be applied to:",
+                            "Data can be simple or structured.  Structured data\n\t   can be composed of many nested layers, composed of\n\t   combinations of metadata and raw data, with other simple or\n\t   structured data.",
+                            "Many properties of raw data or metadata may need\n\t   to be validated upon entry into the code, such\n\t   as:",
+                            "Implied or derived properties of data must often\n\t   be calculated or inferred by the code itself.  Errors in\n\t   deriving properties may be considered a contributing factor\n\t   to improper input validation.",
+                            "Note that \"input validation\" has very different\n\t   meanings to different people, or within different\n\t   classification schemes.  Caution must be used when\n\t   referencing this CWE entry or mapping to it.  For example,\n\t   some weaknesses might involve inadvertently giving control\n\t   to an attacker over an input when they should not be able\n\t   to provide an input at all, but sometimes this is referred\n\t   to as input validation.",
+                            "Finally, it is important to emphasize that the\n\t   distinctions between input validation and output escaping\n\t   are often blurred, and developers must be careful to\n\t   understand the difference, including how input validation\n\t   is not always sufficient to prevent vulnerabilities,\n\t   especially when less stringent data types must be\n\t   supported, such as free-form text. Consider a SQL injection\n\t   scenario in which a person's last name is inserted into a\n\t   query. The name \"O'Reilly\" would likely pass the validation\n\t   step since it is a common last name in the English\n\t   language. However, this valid name cannot be directly\n\t   inserted into the database because it contains the \"'\"\n\t   apostrophe character, which would need to be escaped or\n\t   otherwise transformed. In this case, removing the\n\t   apostrophe might reduce the risk of SQL injection, but it\n\t   would produce incorrect behavior because the wrong name\n\t   would be recorded."
+                        ],
+                        "xhtml:ul": [
+                            {
+                                "xhtml:li": [
+                                    "raw data - strings, numbers, parameters, file contents, etc.",
+                                    "metadata - information about the raw data, such as headers or size"
+                                ]
+                            },
+                            {
+                                "xhtml:li": [
+                                    "specified quantities such as size, length, frequency, price, rate, number of operations, time, etc.",
+                                    "implied or derived quantities, such as the actual size of a file instead of a specified size",
+                                    "indexes, offsets, or positions into more complex data structures",
+                                    "symbolic keys or other elements into hash tables, associative arrays, etc.",
+                                    "well-formedness, i.e. syntactic correctness - compliance with expected syntax",
+                                    "lexical token correctness - compliance with rules for what is treated as a token",
+                                    "specified or derived type - the actual type of the input (or what the input appears to be)",
+                                    "consistency - between individual data elements, between raw data and metadata, between references, etc.",
+                                    "conformance to domain-specific rules, e.g. business logic",
+                                    "equivalence - ensuring that equivalent inputs are treated the same",
+                                    "authenticity, ownership, or other attestations about the input, e.g. a cryptographic signature to prove the source of the data"
+                                ]
+                            }
+                        ]
+                    },
+                    "exploitability": "High",
+                    "consequences": [
+                        {
+                            "Scope": "Availability",
+                            "Impact": [
+                                "DoS: Crash, Exit, or Restart",
+                                "DoS: Resource Consumption (CPU)",
+                                "DoS: Resource Consumption (Memory)"
+                            ],
+                            "Note": "An attacker could provide unexpected values and cause a program crash or excessive consumption of resources, such as memory and CPU."
+                        },
+                        {
+                            "Scope": "Confidentiality",
+                            "Impact": [
+                                "Read Memory",
+                                "Read Files or Directories"
+                            ],
+                            "Note": "An attacker could read confidential data if they are able to control resource references."
+                        },
+                        {
+                            "Scope": [
+                                "Integrity",
+                                "Confidentiality",
+                                "Availability"
+                            ],
+                            "Impact": [
+                                "Modify Memory",
+                                "Execute Unauthorized Code or Commands"
+                            ],
+                            "Note": "An attacker could use malicious input to modify data or possibly alter control flow in unexpected ways, including arbitrary command execution."
+                        }
+                    ],
+                    "mitigations": [
+                        {
+                            "Phase": "Architecture and Design",
+                            "Strategy": "Attack Surface Reduction",
+                            "Description": "Consider using language-theoretic security (LangSec) techniques that characterizes inputs using a formal language and builds \"recognizers\" for that language.  This effectively requires parsing to be a distinct layer that effectively enforces a boundary between raw input and internal data representations, instead of allowing parser code to be scattered throughout the program, where it could be subject to errors or inconsistencies that create weaknesses. [REF-1109] [REF-1110] [REF-1111]"
+                        },
+                        {
+                            "Mitigation_ID": "MIT-7",
+                            "Phase": "Architecture and Design",
+                            "Strategy": "Libraries or Frameworks",
+                            "Description": "Use an input validation framework such as Struts or the OWASP ESAPI Validation API. Note that using a framework does not automatically address all input validation problems; be mindful of weaknesses that could arise from misusing the framework itself (CWE-1173)."
+                        },
+                        {
+                            "Mitigation_ID": "MIT-6",
+                            "Phase": [
+                                "Architecture and Design",
+                                "Implementation"
+                            ],
+                            "Strategy": "Attack Surface Reduction",
+                            "Description": "Understand all the potential areas where untrusted inputs can enter your software: parameters or arguments, cookies, anything read from the network, environment variables, reverse DNS lookups, query results, request headers, URL components, e-mail, files, filenames, databases, and any external systems that provide data to the application. Remember that such inputs may be obtained indirectly through API calls."
+                        },
+                        {
+                            "Mitigation_ID": "MIT-5",
+                            "Phase": "Implementation",
+                            "Strategy": "Input Validation",
+                            "Description": {
+                                "xhtml:p": [
+                                    "Assume all input is malicious. Use an \"accept known good\" input validation strategy, i.e., use a list of acceptable inputs that strictly conform to specifications. Reject any input that does not strictly conform to specifications, or transform it into something that does.",
+                                    "When performing input validation, consider all potentially relevant properties, including length, type of input, the full range of acceptable values, missing or extra inputs, syntax, consistency across related fields, and conformance to business rules. As an example of business rule logic, \"boat\" may be syntactically valid because it only contains alphanumeric characters, but it is not valid if the input is only expected to contain colors such as \"red\" or \"blue.\"",
+                                    "Do not rely exclusively on looking for malicious or malformed inputs.  This is likely to miss at least one undesirable input, especially if the code's environment changes. This can give attackers enough room to bypass the intended validation. However, denylists can be useful for detecting potential attacks or determining which inputs are so malformed that they should be rejected outright."
+                                ]
+                            },
+                            "Effectiveness": "High"
+                        },
+                        {
+                            "Phase": "Architecture and Design",
+                            "Description": {
+                                "xhtml:p": [
+                                    "For any security checks that are performed on the client side, ensure that these checks are duplicated on the server side, in order to avoid CWE-602. Attackers can bypass the client-side checks by modifying values after the checks have been performed, or by changing the client to remove the client-side checks entirely. Then, these modified values would be submitted to the server.",
+                                    "Even though client-side checks provide minimal benefits with respect to server-side security, they are still useful. First, they can support intrusion detection. If the server receives input that should have been rejected by the client, then it may be an indication of an attack. Second, client-side error-checking can provide helpful feedback to the user about the expectations for valid input. Third, there may be a reduction in server-side processing time for accidental input errors, although this is typically a small savings."
+                                ]
+                            }
+                        },
+                        {
+                            "Phase": "Implementation",
+                            "Description": "When your application combines data from multiple sources, perform the validation after the sources have been combined. The individual data elements may pass the validation step but violate the intended restrictions after they have been combined."
+                        },
+                        {
+                            "Mitigation_ID": "MIT-35",
+                            "Phase": "Implementation",
+                            "Description": "Be especially careful to validate all input when invoking code that crosses language boundaries, such as from an interpreted language to native code. This could create an unexpected interaction between the language boundaries. Ensure that you are not violating any of the expectations of the language with which you are interfacing. For example, even though Java may not be susceptible to buffer overflows, providing a large argument in a call to native code might trigger an overflow."
+                        },
+                        {
+                            "Phase": "Implementation",
+                            "Description": "Directly convert your input type into the expected data type, such as using a conversion function that translates a string into a number. After converting to the expected data type, ensure that the input's values fall within the expected range of allowable values and that multi-field consistencies are maintained."
+                        },
+                        {
+                            "Phase": "Implementation",
+                            "Description": {
+                                "xhtml:p": [
+                                    "Inputs should be decoded and canonicalized to the application's current internal representation before being validated (CWE-180, CWE-181). Make sure that your application does not inadvertently decode the same input twice (CWE-174). Such errors could be used to bypass allowlist schemes by introducing dangerous inputs after they have been checked. Use libraries such as the OWASP ESAPI Canonicalization control.",
+                                    "Consider performing repeated canonicalization until your input does not change any more. This will avoid double-decoding and similar scenarios, but it might inadvertently modify inputs that are allowed to contain properly-encoded dangerous content."
+                                ]
+                            }
+                        },
+                        {
+                            "Phase": "Implementation",
+                            "Description": "When exchanging data between components, ensure that both components are using the same character encoding. Ensure that the proper encoding is applied at each interface. Explicitly set the encoding you are using whenever the protocol allows you to do so."
+                        }
+                    ]
+                }
+            ],
+            "severityScore": "Critical",
+            "id": "CVE-2019-10744_npm+lodash.template",
+            "description": "Versions of lodash lower than 4.17.12 are vulnerable to Prototype Pollution. The function defaultsDeep could be tricked into adding or modifying properties of Object.prototype using a constructor payload.",
+            "cwes": [
+                "CWE-20"
+            ],
+            "cvss": 9.1,
+            "published": "2019-04-03T00:00:00.000Z",
+            "references": [
+                "https://github.com/lodash/lodash/pull/4336",
+                "https://www.npmjs.com/package/lodash.template",
+                "https://github.com/advisories/GHSA-jf85-cpcp-j695"
+            ],
+            "affectedVersionRanges": [
+                "<4.5.0"
+            ],
+            "unaffectedVersionRanges": [],
+            "patchedVersionRanges": [],
+            "createdAt": "2019-07-30T20:31:21.808Z",
+            "updatedAt": "2019-07-30T20:31:21.808Z",
+            "cve": "CVE-2019-10744",
+            "cvssV2Vector": "AV:N/AC:L/Au:N/C:N/I:P/A:P",
+            "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H"
+        },
+        "pullRequestIssues": null,
+        "pullRequests": null,
+        "licenseId": null,
+        "rule": null,
+        "isVendoredScanIssue": false,
+        "latestRevision": "npm+lodash.template$4.5.0"
+    }
+]

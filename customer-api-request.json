@@ -1,0 +1,39 @@
+{
+    "findings": {
+        "critical": [],
+        "high": [],
+        "low": [{
+            "ID": "",
+            "comment": "",
+            "criticality": "",
+            "cve": "",
+            "cwe": "",
+            "dependency": "",
+            "description": "",
+            "finding": "",
+            "identifiers":,
+            "lineEnd": "",
+            "lineStart": "",
+            "links": null,
+            "location": "FinalCopyAutomation/bin/DigitalAutomation/src/main/resources/config/BasicAuth.au3",
+            "recommendation": null,
+            "snippet": null,
+            "solution": "",
+            "status": "",
+            "targetFunction": ""
+        }],
+        "info": []
+    },
+    "summary": {
+        "counts": {
+            "criticalCount": 0,
+            "highCount": 0,
+            "infoCount": 0,
+            "lowCount": 0,
+            "mediumCount": 0,
+            "unknownCount": 0,
+            "warningCount": 0
+         }
+    }
+}
+

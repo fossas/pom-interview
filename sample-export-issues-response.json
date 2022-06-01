@@ -1,0 +1,51 @@
+{
+  "Discovered License Issues": [],
+  "Package License Issues": [],
+  "Quality Issues": [],
+  "Vulnerability Issues": [
+    {
+      "Dependency": "lodash-es",
+      "Revision": "4.17.11",
+      "CVE": "CVE-2019-10744",
+      "Affected Project": "https://github.com/xinding33/kepler.gl.git",
+      "Reference": "https://github.com/lodash/lodash/pull/4336",
+      "CWE": "CWE-20",
+      "CVSS Score": "9.1",
+      "Details": "Versions of lodash lower than 4.17.12 are vulnerable to Prototype Pollution. The function defaultsDeep could be tricked into adding or modifying properties of Object.prototype using a constructor payload.",
+      "Remediation Advice": "This vulnerability exists in a transitive dependency. It can be upgraded by adding the project as a direct dependency. Add lodash-es@4.17.14 as a direct dependency"
+    },
+    {
+      "Dependency": "lodash-es",
+      "Revision": "4.17.11",
+      "CVE": "CVE-2019-10744",
+      "Affected Project": "https://github.com/xinding33/kepler.gl.git",
+      "Reference": "https://www.npmjs.com/package/lodash-es",
+      "CWE": "CWE-20",
+      "CVSS Score": "9.1",
+      "Details": "Versions of lodash lower than 4.17.12 are vulnerable to Prototype Pollution. The function defaultsDeep could be tricked into adding or modifying properties of Object.prototype using a constructor payload.",
+      "Remediation Advice": "This vulnerability exists in a transitive dependency. It can be upgraded by adding the project as a direct dependency. Add lodash-es@4.17.14 as a direct dependency"
+    },
+    {
+      "Dependency": "lodash-es",
+      "Revision": "4.17.11",
+      "CVE": "CVE-2019-10744",
+      "Affected Project": "https://github.com/xinding33/kepler.gl.git",
+      "Reference": "https://github.com/advisories/GHSA-jf85-cpcp-j695",
+      "CWE": "CWE-20",
+      "CVSS Score": "9.1",
+      "Details": "Versions of lodash lower than 4.17.12 are vulnerable to Prototype Pollution. The function defaultsDeep could be tricked into adding or modifying properties of Object.prototype using a constructor payload.",
+      "Remediation Advice": "This vulnerability exists in a transitive dependency. It can be upgraded by adding the project as a direct dependency. Add lodash-es@4.17.14 as a direct dependency"
+    },
+    {
+      "Dependency": "lodash-es",
+      "Revision": "4.17.11",
+      "CVE": "CVE-2019-10744",
+      "Affected Project": "https://github.com/keplergl/kepler.gl.git",
+      "Reference": "https://github.com/lodash/lodash/pull/4336",
+      "CWE": "CWE-20",
+      "CVSS Score": "9.1",
+      "Details": "Versions of lodash lower than 4.17.12 are vulnerable to Prototype Pollution. The function defaultsDeep could be tricked into adding or modifying properties of Object.prototype using a constructor payload.",
+      "Remediation Advice": "This vulnerability exists in a transitive dependency. It can be upgraded by adding the project as a direct dependency. Add lodash-es@4.17.14 as a direct dependency"
+    }
+  ]
+}
