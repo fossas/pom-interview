@@ -12,6 +12,7 @@ This is a domain-specific question. You're totally not expected to know everythi
 FOSSA currently returns a set of Issues in the following format ([example found here](./sample-issues-response.json)).
 
 ![issue](./issue-format.png)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ffossas%2Fpom-interview.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Ffossas%2Fpom-interview?ref=badge_shield)
 
 However, one of our large customers is requesting a different format ([example found here](./customer-api-request.json)).
 
@@ -24,3 +25,7 @@ As a short-term solution, we'd like you to author a short script to help a custo
 How would you present this feature request to the product team? 
 
 
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ffossas%2Fpom-interview.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Ffossas%2Fpom-interview?ref=badge_large)
